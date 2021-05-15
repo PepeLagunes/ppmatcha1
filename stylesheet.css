@@ -3,12 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     background-color: #fefbf6;
     padding-top: 250px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    font-family: "Open Sans",sans-serif;
 }
-
 h1 {    
     color: #0e5f1f;
     font-family: 'Titan One', cursive;
@@ -23,15 +27,26 @@ h4 {
     justify-content: center;    
     color: #46484c;
 }
-form{
-    height:55px;
+img{
+    vertical-align: middle;
 }
+.tumama {
+    text-align: center;
+    color: #8b8b8bcc;
+     margin-top: 15px;
+     
+     font-size: 1rem;
+     font-weight: 400;
+     line-height: 1.5;
+     font-family: sans-serif;
+     font-size: 20;
+}
+
+
 form.primerboton{
     display: block;
     text-align: center;
-    height: 50px;
-    background-color: red;
-    
+    height: 55px;
 }
 form.primerboton input{
     border: 1px solid #b6b6b6;
@@ -53,16 +68,7 @@ form.primerboton button{
     border-bottom-left-radius: 0;
     margin-left: -20px;
  }
- p {
-     color: #8b8b8bcc;
-     margin-top: 15px;
-     text-align: center;
-     font-size: 1rem;
-     font-weight: 400;
-     line-height: 1.5;
-     font-family: sans-serif;
-     font-size: 20;
- }
+ 
 .menu-item {
     display: inline;
     margin-right: 25px;
@@ -134,7 +140,7 @@ picture{
 } 
 .Grandota {
     display: flex;
-    width: 90%;
+    width: 80%;
     height: auto;
     
 }  
@@ -155,6 +161,7 @@ div.capterra{
 .explanatoryvideo{
     display: flex;
     margin: 20px;
+    padding-right: 100px;
     flex-direction: column;
     align-items: center;
 }
@@ -164,8 +171,9 @@ div.capterra{
 }
 video{
     padding: 1%;
-    width: auto;
-    height: 250px;
+    width: 428px;
+    height: 240px;
+    object-fit: fill;
 }
 
 .blogpublish{
@@ -190,13 +198,13 @@ video{
     font-size: 16px;
     color: #343434;
     line-height: 1.5;
-    margin-bottom: 20px;
-  }
+    margin: 20px 0px;
+}
 .publish > form {
     display: flex;
   }
 .publish > form p {
-    color: #025157;
+    color: #7a8181;
     margin-right: 18px;
 }
 .publish form {
@@ -224,5 +232,63 @@ form div{
 }
 button, input{
     height: 100%;
-    border-radius: 8%;
+    border-radius: 8px;
 }
+
+/*---------------- Seccion de grid----------------- */
+
+.features{                      /*grid*/
+    display: grid;
+    grid-template:repeat(2,330px)/repeat(2,1fr);
+    background-color: #025157;
+    padding: 5% 10%;
+}
+
+.features .feature-card{        /*contenedores*/
+    margin: 30px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.features .feature-card .feature-content{       
+    padding: 30px 20px 40px 40px;
+    flex: 2;
+}
+.features .feature-card .feature-content > *{
+   margin-bottom: 1rem;
+   margin-top: 0;     
+}
+.features .feature-card .feature-content img{
+    width: 50px;
+}
+h6{
+    font-size: 24px;
+    color: #343434;
+    font-weight: 400;
+}
+.features .feature-card .feature-content p{
+    font-size: 16px;
+    color: #7e7e7e;
+    font-weight: 400;
+}
+.features .feature-card .feature-content a{
+    font-size: 16px;
+    color: #67b54b;
+    font-weight: 600;
+    text-decoration: #b6b6b6;
+}
+.features .feature-card .feature-image{/*imagenes*/
+    flex: 1;
+    width: 40%;
+    position: relative;
+    right: -50px;
+    height: 80%;
+}
+.features .feature-card .feature-image figure, .features .feature-card .feature-image img{  /*preguntar a sebastian que vergas paso aqui*/
+    margin-top: 0;
+    height: 100%;
+}
+
